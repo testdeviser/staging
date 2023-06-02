@@ -1,0 +1,469 @@
+<?php
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$storeScope = \Magento\Store\Model\ScopeInterface::SCOPE_STORES;
+
+/* processing */
+$processing_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/processing/processing_bg_c',$storeScope);
+$processing_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/processing/processing_txt_c',$storeScope);
+$processing_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/processing/processing_bg_c_hover',$storeScope);
+$processing_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/processing/processing_txt_c_hover',$storeScope);
+
+/* pending */
+$pending_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/pending/pending_bg_c',$storeScope);
+$pending_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/pending/pending_txt_c',$storeScope);
+$pending_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/pending/pending_bg_c_hover',$storeScope);
+$pending_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/pending/pending_txt_c_hover',$storeScope);
+
+/* complete */
+$complete_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/complete/complete_bg_c',$storeScope);
+$complete_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/complete/complete_txt_c',$storeScope);
+$complete_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/complete/complete_bg_c_hover',$storeScope);
+$complete_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/complete/complete_txt_c_hover',$storeScope);
+
+/* pickedup */
+$pickedup_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/pickedup/pickedup_bg_c',$storeScope);
+$pickedup_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/pickedup/pickedup_txt_c',$storeScope);
+$pickedup_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/pickedup/pickedup_bg_c_hover',$storeScope);
+$pickedup_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/pickedup/pickedup_txt_c_hover',$storeScope);
+
+/* delivered */
+$delivered_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/delivered/delivered_bg_c',$storeScope);
+$delivered_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/delivered/delivered_txt_c',$storeScope);
+$delivered_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/delivered/delivered_bg_c_hover',$storeScope);
+$delivered_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/delivered/delivered_txt_c_hover',$storeScope);
+
+/* pending_freight_pickup */
+$pending_freight_pickup_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/pending_freight_pickup/pending_freight_pickup_bg_c',$storeScope);
+$pending_freight_pickup_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/pending_freight_pickup/pending_freight_pickup_txt_c',$storeScope);
+$pending_freight_pickup_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/pending_freight_pickup/pending_freight_pickup_bg_c_hover',$storeScope);
+$pending_freight_pickup_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/pending_freight_pickup/pending_freight_pickup_txt_c_hover',$storeScope);
+
+/* pending_delivery */
+$pending_delivery_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/pending_delivery/pending_delivery_bg_c',$storeScope);
+$pending_delivery_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/pending_delivery/pending_delivery_txt_c',$storeScope);
+$pending_delivery_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/pending_delivery/pending_delivery_bg_c_hover',$storeScope);
+$pending_delivery_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/pending_delivery/pending_delivery_txt_c_hover',$storeScope);
+
+/* canceled */
+$canceled_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceled/canceled_bg_c',$storeScope);
+$canceled_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceled/canceled_txt_c',$storeScope);
+$canceled_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceled/canceled_bg_c_hover',$storeScope);
+$canceled_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceled/canceled_txt_c_hover',$storeScope);
+
+
+/* canceledleadtime */
+$canceledleadtime_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceledleadtime/canceledleadtime_bg_c',$storeScope);
+$canceledleadtime_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceledleadtime/canceledleadtime_txt_c',$storeScope);
+$canceledleadtime_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceledleadtime/canceledleadtime_bg_c_hover',$storeScope);
+$canceledleadtime_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceledleadtime/canceledleadtime_txt_c_hover',$storeScope);
+
+/* canceldup */
+$canceldup_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceldup/canceldup_bg_c',$storeScope);
+$canceldup_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceldup/canceldup_txt_c',$storeScope);
+$canceldup_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceldup/canceldup_bg_c_hover',$storeScope);
+$canceldup_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceldup/canceldup_txt_c_hover',$storeScope);
+
+/* canceledprice */
+$canceledprice_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceledprice/canceledprice_bg_c',$storeScope);
+$canceledprice_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceledprice/canceledprice_txt_c',$storeScope);
+$canceledprice_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceledprice/canceledprice_bg_c_hover',$storeScope);
+$canceledprice_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceledprice/canceledprice_txt_c_hover',$storeScope);
+
+/* cancelefficiency */
+$cancelefficiency_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/cancelefficiency/cancelefficiency_bg_c',$storeScope);
+$cancelefficiency_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/cancelefficiency/cancelefficiency_txt_c',$storeScope);
+$cancelefficiency_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/cancelefficiency/cancelefficiency_bg_c_hover',$storeScope);
+$cancelefficiency_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/cancelefficiency/cancelefficiency_txt_c_hover',$storeScope);
+
+/* canceledcustomer */
+$canceledcustomer_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceledcustomer/canceledcustomer_bg_c',$storeScope);
+$canceledcustomer_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceledcustomer/canceledcustomer_txt_c',$storeScope);
+$canceledcustomer_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceledcustomer/canceledcustomer_bg_c_hover',$storeScope);
+$canceledcustomer_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/canceledcustomer/canceledcustomer_txt_c_hover',$storeScope);
+
+/* paypal_canceled_reversal */
+$paypal_canceled_reversal_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/paypal_canceled_reversal/paypal_canceled_reversal_bg_c',$storeScope);
+$paypal_canceled_reversal_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/paypal_canceled_reversal/paypal_canceled_reversal_txt_c',$storeScope);
+$paypal_canceled_reversal_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/paypal_canceled_reversal/paypal_canceled_reversal_bg_c_hover',$storeScope);
+$paypal_canceled_reversal_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/paypal_canceled_reversal/paypal_canceled_reversal_txt_c_hover',$storeScope);
+
+/* partial_return */
+$partial_return_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/partial_return/partial_return_bg_c',$storeScope);
+$partial_return_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/partial_return/partial_return_txt_c',$storeScope);
+$partial_return_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/partial_return/partial_return_bg_c_hover',$storeScope);
+$partial_return_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/partial_return/partial_return_txt_c_hover',$storeScope);
+
+/* returned */
+$returned_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/returned/returned_bg_c',$storeScope);
+$returned_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/returned/returned_txt_c',$storeScope);
+$returned_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/returned/returned_bg_c_hover',$storeScope);
+$returned_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/returned/returned_txt_c_hover',$storeScope);
+
+/* holded */
+$holded_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/holded/holded_bg_c',$storeScope);
+$holded_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/holded/holded_txt_c',$storeScope);
+$holded_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/holded/holded_bg_c_hover',$storeScope);
+$holded_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/holded/holded_txt_c_hover',$storeScope);
+
+/* processing_order */
+$processing_order_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/processing_order/processing_order_bg_c',$storeScope);
+$processing_order_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/processing_order/processing_order_txt_c',$storeScope);
+$processing_order_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/processing_order/processing_order_bg_c_hover',$storeScope);
+$processing_order_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/processing_order/processing_order_txt_c_hover',$storeScope);
+
+/* waiting */
+$waiting_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/waiting/waiting_bg_c',$storeScope);
+$waiting_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/waiting/waiting_txt_c',$storeScope);
+$waiting_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/waiting/waiting_bg_c_hover',$storeScope);
+$waiting_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/waiting/waiting_txt_c_hover',$storeScope);
+
+/* underreview */
+$underreview_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/underreview/underreview_bg_c',$storeScope);
+$underreview_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/underreview/underreview_txt_c',$storeScope);
+$underreview_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/underreview/underreview_bg_c_hover',$storeScope);
+$underreview_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/underreview/underreview_txt_c_hover',$storeScope);
+
+/* readytoprocess */
+$readytoprocess_bg_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/readytoprocess/readytoprocess_bg_c',$storeScope);
+$readytoprocess_txt_c = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/readytoprocess/readytoprocess_txt_c',$storeScope);
+$readytoprocess_bg_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/readytoprocess/readytoprocess_bg_c_hover',$storeScope);
+$readytoprocess_txt_c_hover = $objectManager->get('Magento\Framework\App\Config\ScopeConfigInterface')->getValue('ordergrid/readytoprocess/readytoprocess_txt_c_hover',$storeScope);
+
+
+if($processing_bg_c == ''){
+	$processing_bg_c = "#ffffff";
+}
+if($pending_bg_c == ''){
+	$pending_bg_c = "#ffffff";
+}
+if($complete_bg_c == ''){
+	$complete_bg_c = "#ffffff";
+}
+if($pickedup_bg_c == ''){
+	$pickedup_bg_c = "#ffffff";
+}
+if($delivered_bg_c == ''){
+	$delivered_bg_c = "#ffffff";
+}
+if($pending_freight_pickup_bg_c == ''){
+	$pending_freight_pickup_bg_c = "#ffffff";
+}
+if($pending_delivery_bg_c == ''){
+	$pending_delivery_bg_c = "#ffffff";
+}
+if($canceled_bg_c == ''){
+	$canceled_bg_c = "#ffffff";
+}
+if($canceledleadtime_bg_c == ''){
+	$canceledleadtime_bg_c = "#ffffff";
+}
+if($canceldup_bg_c == ''){
+	$canceldup_bg_c = "#ffffff";
+}
+if($canceledprice_bg_c == ''){
+	$canceledprice_bg_c = "#ffffff";
+}
+if($cancelefficiency_bg_c == ''){
+	$cancelefficiency_bg_c = "#ffffff";
+}
+if($canceledcustomer_bg_c == ''){
+	$canceledcustomer_bg_c = "#ffffff";
+}
+if($paypal_canceled_reversal_bg_c == ''){
+	$paypal_canceled_reversal_bg_c = "#ffffff";
+}
+if($partial_return_bg_c == ''){
+	$partial_return_bg_c = "#ffffff";
+}
+if($returned_bg_c == ''){
+	$returned_bg_c = "#ffffff";
+}
+if($holded_bg_c == ''){
+	$holded_bg_c = "#ffffff";
+}
+if($processing_order_bg_c == ''){
+	$processing_order_bg_c = "#ffffff";
+}
+if($waiting_bg_c == ''){
+	$waiting_bg_c = "#ffffff";
+}
+if($underreview_bg_c == ''){
+	$underreview_bg_c = "#ffffff";
+}
+if($readytoprocess_bg_c == ''){
+	$readytoprocess_bg_c = "#ffffff";
+}
+
+
+if($processing_txt_c == ''){
+	$processing_txt_c = "#000000";
+}
+if($pending_txt_c == ''){
+	$pending_txt_c = "#000000";
+}
+if($complete_txt_c == ''){
+	$complete_txt_c = "#000000";
+}
+if($pickedup_txt_c == ''){
+	$pickedup_txt_c = "#000000";
+}
+if($delivered_txt_c == ''){
+	$delivered_txt_c = "#000000";
+}
+if($pending_freight_pickup_txt_c == ''){
+	$pending_freight_pickup_txt_c = "#000000";
+}
+if($pending_delivery_txt_c == ''){
+	$pending_delivery_txt_c = "#000000";
+}
+if($canceled_txt_c == ''){
+	$canceled_txt_c = "#000000";
+}
+if($canceledleadtime_txt_c == ''){
+	$canceledleadtime_txt_c = "#000000";
+}
+if($canceldup_txt_c == ''){
+	$canceldup_txt_c = "#000000";
+}
+if($canceledprice_txt_c == ''){
+	$canceledprice_txt_c = "#000000";
+}
+if($cancelefficiency_txt_c == ''){
+	$cancelefficiency_txt_c = "#000000";
+}
+if($canceledcustomer_txt_c == ''){
+	$canceledcustomer_txt_c = "#000000";
+}
+if($paypal_canceled_reversal_txt_c == ''){
+	$paypal_canceled_reversal_txt_c = "#000000";
+}
+if($partial_return_txt_c == ''){
+	$partial_return_txt_c = "#000000";
+}
+if($returned_txt_c == ''){
+	$returned_txt_c = "#000000";
+}
+if($holded_txt_c == ''){
+	$holded_txt_c = "#000000";
+}
+if($processing_order_txt_c == ''){
+	$processing_order_txt_c = "#000000";
+}
+if($waiting_txt_c == ''){
+	$waiting_txt_c = "#000000";
+}
+if($underreview_txt_c == ''){
+	$underreview_txt_c = "#000000";
+}
+if($readytoprocess_txt_c == ''){
+	$readytoprocess_txt_c = "#000000";
+}
+
+
+if($processing_bg_c_hover == ''){
+	$processing_bg_c_hover = "#ffffff";
+}
+if($pending_bg_c_hover == ''){
+	$pending_bg_c_hover = "#ffffff";
+}
+if($complete_bg_c_hover == ''){
+	$complete_bg_c_hover = "#ffffff";
+}
+if($pickedup_bg_c_hover == ''){
+	$pickedup_bg_c_hover = "#ffffff";
+}
+if($delivered_bg_c_hover == ''){
+	$delivered_bg_c_hover = "#ffffff";
+}
+if($pending_freight_pickup_bg_c_hover == ''){
+	$pending_freight_pickup_bg_c_hover = "#ffffff";
+}
+if($pending_delivery_bg_c_hover == ''){
+	$pending_delivery_bg_c_hover = "#ffffff";
+}
+if($canceled_bg_c_hover == ''){
+	$canceled_bg_c_hover = "#ffffff";
+}
+if($canceledleadtime_bg_c_hover == ''){
+	$canceledleadtime_bg_c_hover = "#ffffff";
+}
+if($canceldup_bg_c_hover == ''){
+	$canceldup_bg_c_hover = "#ffffff";
+}
+if($canceledprice_bg_c_hover == ''){
+	$canceledprice_bg_c_hover = "#ffffff";
+}
+if($cancelefficiency_bg_c_hover == ''){
+	$cancelefficiency_bg_c_hover = "#ffffff";
+}
+if($canceledcustomer_bg_c_hover == ''){
+	$canceledcustomer_bg_c_hover = "#ffffff";
+}
+if($paypal_canceled_reversal_bg_c_hover == ''){
+	$paypal_canceled_reversal_bg_c_hover = "#ffffff";
+}
+if($partial_return_bg_c_hover == ''){
+	$partial_return_bg_c_hover = "#ffffff";
+}
+if($returned_bg_c_hover == ''){
+	$returned_bg_c_hover = "#ffffff";
+}
+if($holded_bg_c_hover == ''){
+	$holded_bg_c_hover = "#ffffff";
+}
+if($processing_order_bg_c_hover == ''){
+	$processing_order_bg_c_hover = "#ffffff";
+}
+if($waiting_bg_c_hover == ''){
+	$waiting_bg_c_hover = "#ffffff";
+}
+if($underreview_bg_c_hover == ''){
+	$underreview_bg_c_hover = "#ffffff";
+}
+if($readytoprocess_bg_c_hover == ''){
+	$readytoprocess_bg_c_hover = "#ffffff";
+}
+
+
+if($processing_txt_c_hover == ''){
+	$processing_txt_c_hover = "#000000";
+}
+if($pending_txt_c_hover == ''){
+	$pending_txt_c_hover = "#000000";
+}
+if($complete_txt_c_hover == ''){
+	$complete_txt_c_hover = "#000000";
+}
+if($pickedup_txt_c_hover == ''){
+	$pickedup_txt_c_hover = "#000000";
+}
+if($delivered_txt_c_hover == ''){
+	$delivered_txt_c_hover = "#000000";
+}
+if($pending_freight_pickup_txt_c_hover == ''){
+	$pending_freight_pickup_txt_c_hover = "#000000";
+}
+if($pending_delivery_txt_c_hover == ''){
+	$pending_delivery_txt_c_hover = "#000000";
+}
+if($canceled_txt_c_hover == ''){
+	$canceled_txt_c_hover = "#000000";
+}
+if($canceledleadtime_txt_c_hover == ''){
+	$canceledleadtime_txt_c_hover = "#000000";
+}
+if($canceldup_txt_c_hover == ''){
+	$canceldup_txt_c_hover = "#000000";
+}
+if($canceledprice_txt_c_hover == ''){
+	$canceledprice_txt_c_hover = "#000000";
+}
+if($cancelefficiency_txt_c_hover == ''){
+	$cancelefficiency_txt_c_hover = "#000000";
+}
+if($canceledcustomer_txt_c_hover == ''){
+	$canceledcustomer_txt_c_hover = "#000000";
+}
+if($paypal_canceled_reversal_txt_c_hover == ''){
+	$paypal_canceled_reversal_txt_c_hover = "#000000";
+}
+if($partial_return_txt_c_hover == ''){
+	$partial_return_txt_c_hover = "#000000";
+}
+if($returned_txt_c_hover == ''){
+	$returned_txt_c_hover = "#000000";
+}
+if($holded_txt_c_hover == ''){
+	$holded_txt_c_hover = "#000000";
+}
+if($processing_order_txt_c_hover == ''){
+	$processing_order_txt_c_hover = "#000000";
+}
+if($waiting_txt_c_hover == ''){
+	$waiting_txt_c_hover = "#000000";
+}
+if($underreview_txt_c_hover == ''){
+	$underreview_txt_c_hover = "#000000";
+}
+if($readytoprocess_txt_c_hover == ''){
+	$readytoprocess_txt_c_hover = "#000000";
+}
+
+?>
+<style>
+.data-grid td
+{
+border-width: 0 1px 1px 0;
+border-color: #dadfe0;
+border-style: solid;
+padding: 2px 4px 2px 4px; 
+}
+<?php
+
+
+
+?>
+td.processing {<?php echo "background-color: ".$processing_bg_c.";color:".$processing_txt_c.";"; ?>}
+td.pending {<?php echo "background-color: ".$pending_bg_c.";color:".$pending_txt_c.";"; ?>}
+td.complete {<?php echo "background-color: ".$complete_bg_c.";color:".$complete_txt_c.";"; ?>}
+td.pickedup {<?php echo "background-color: ".$pickedup_bg_c.";color:".$pickedup_txt_c.";"; ?>}
+td.delivered {<?php echo "background-color: ".$delivered_bg_c.";color:".$delivered_txt_c.";"; ?>}
+td.pending_freight_pickup {<?php echo "background-color: ".$pending_freight_pickup_bg_c.";color:".$pending_freight_pickup_txt_c.";"; ?>}
+td.pending_delivery {<?php echo "background-color: ".$pending_delivery_bg_c.";color:".$pending_delivery_txt_c.";"; ?>}
+td.canceled, td.cancelled {<?php echo "background-color: ".$canceled_bg_c.";color:".$canceled_txt_c.";"; ?>}
+td.canceledleadtime{<?php echo "background-color: ".$canceledleadtime_bg_c.";color:".$canceledleadtime_txt_c.";"; ?>}
+td.canceldup{<?php echo "background-color: ".$canceldup_bg_c.";color:".$canceldup_txt_c.";"; ?>}
+td.canceledprice{<?php echo "background-color: ".$canceledprice_bg_c.";color:".$canceledprice_txt_c.";"; ?>}
+td.cancelefficiency{<?php echo "background-color: ".$cancelefficiency_bg_c.";color:".$cancelefficiency_txt_c.";"; ?>}
+td.canceledcustomer{<?php echo "background-color: ".$canceledcustomer_bg_c.";color:".$canceledcustomer_txt_c.";"; ?>}
+td.paypal_canceled_reversal{<?php echo "background-color: ".$paypal_canceled_reversal_bg_c.";color:".$paypal_canceled_reversal_txt_c.";"; ?>}
+td.partial_return {<?php echo "background-color: ".$partial_return_bg_c.";color:".$partial_return_txt_c.";"; ?>}
+td.returned {<?php echo "background-color: ".$returned_bg_c.";color:".$returned_txt_c.";"; ?>}
+td.holded {<?php echo "background-color: ".$holded_bg_c.";color:".$holded_txt_c.";"; ?>}
+td.processing_order {<?php echo "background-color: ".$processing_order_bg_c.";color:".$processing_order_txt_c.";"; ?>}
+/* td.waiting {background-color: darkkhaki;} */
+td.underreview {<?php echo "background-color: ".$underreview_bg_c.";color:".$underreview_txt_c.";"; ?>}
+td.readytoprocess {<?php echo "background-color: ".$readytoprocess_bg_c.";color:".$readytoprocess_txt_c.";"; ?>}
+td.on-mouse {opacity: .9}
+
+
+
+
+.data-grid tr:hover td.processing {<?php echo "background-color: ".$processing_bg_c_hover.";color:".$processing_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.pending {<?php echo "background-color: ".$pending_bg_c_hover.";color:".$pending_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.complete {<?php echo "background-color: ".$complete_bg_c_hover.";color:".$complete_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.pickedup {<?php echo "background-color: ".$pickedup_bg_c_hover.";color:".$pickedup_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.delivered {<?php echo "background-color: ".$delivered_bg_c_hover.";color:".$delivered_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.pending_freight_pickup {<?php echo "background-color: ".$pending_freight_pickup_bg_c_hover.";color:".$pending_freight_pickup_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.pending_delivery {<?php echo "background-color: ".$pending_delivery_bg_c_hover.";color:".$pending_delivery_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.canceled, .data-grid tr:hover td.cancelled {<?php echo "background-color: ".$canceled_bg_c_hover.";color:".$canceled_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.canceledleadtime{<?php echo "background-color: ".$canceledleadtime_bg_c_hover.";color:".$canceledleadtime_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.canceldup{<?php echo "background-color: ".$canceldup_bg_c_hover.";color:".$canceldup_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.canceledprice{<?php echo "background-color: ".$canceledprice_bg_c_hover.";color:".$canceledprice_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.cancelefficiency{<?php echo "background-color: ".$cancelefficiency_bg_c_hover.";color:".$cancelefficiency_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.canceledcustomer{<?php echo "background-color: ".$canceledcustomer_bg_c_hover.";color:".$canceledcustomer_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.paypal_canceled_reversal{<?php echo "background-color: ".$paypal_canceled_reversal_bg_c_hover.";color:".$paypal_canceled_reversal_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.partial_return {<?php echo "background-color: ".$partial_return_bg_c_hover.";color:".$partial_return_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.returned {<?php echo "background-color: ".$returned_bg_c_hover.";color:".$returned_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.holded {<?php echo "background-color: ".$holded_bg_c_hover.";color:".$holded_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.processing_order {<?php echo "background-color: ".$processing_order_bg_c_hover.";color:".$processing_order_txt_c_hover.";"; ?> opacity: .9}
+/* .data-grid tr:hover td.waiting {background-color: darkkhaki; opacity: .9} */
+.data-grid tr:hover td.underreview {<?php echo "background-color: ".$underreview_bg_c_hover.";color:".$underreview_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.readytoprocess {<?php echo "background-color: ".$readytoprocess_bg_c_hover.";color:".$readytoprocess_txt_c_hover.";"; ?> opacity: .9}
+.data-grid tr:hover td.on-mouse {opacity: .9}
+
+
+
+
+.sales-order-index .pointer
+{
+cursor: pointer;
+}
+td.pending a{color: #ed6502;}
+td.processing a, td.complete a, td.pickedup a, td.delivered a, td.pending_freight_pickup a, td.pending_delivery a, td.canceled a, td.canceledleadtime a, td.canceldup a, td.canceledprice a, td.cancelefficiency a, td.canceledcustomer a, td.paypal_canceled_reversal a, td.cancelled a, td.partial_return a, td.returned a, td.holded a, td.processing_order a, td.underreview a, td.readytoprocess a{color: #003aff;}
+/* td.waiting a{color: #003aff;} */
+
+
+
+</style>

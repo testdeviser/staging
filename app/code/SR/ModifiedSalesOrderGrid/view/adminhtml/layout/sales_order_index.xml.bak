@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="SR_ModifiedSalesOrderGrid::css/grid.css"/>
+		<css src="jquery/colorpicker/css/colorpicker.css"/>
+        <link src="jquery/colorpicker/js/colorpicker.js"/>
+    </head>
+	<body>
+        <referenceContainer name="content">
+            <block class="SR\ModifiedSalesOrderGrid\Block\Adminhtml\Gridcolors" name="grid_colors" template="SR_ModifiedSalesOrderGrid::gridcolors.phtml" />
+        </referenceContainer>
+    </body>
+</page>
