@@ -1,0 +1,413 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="realizeonline" translate="label" sortOrder="1000">
+            <label>Order Grid Colors</label>
+        </tab>
+        <section id="ordergrid" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Order Grid Colors</label>
+            <tab>realizeonline</tab>
+            <resource>SR_ModifiedSalesOrderGrid::import_config</resource>
+            <group id="processing" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Processing</label>               
+                <field id="processing_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="processing_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="processing_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="processing_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="pending" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Pending</label>               
+                <field id="pending_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="pending_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="pending_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="pending_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="complete" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Complete</label>               
+                <field id="complete_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="complete_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="complete_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="complete_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="pickedup" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Pickedup</label>               
+                <field id="pickedup_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="pickedup_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="pickedup_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="pickedup_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="delivered" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Delivered</label>               
+                <field id="delivered_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="delivered_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="delivered_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="delivered_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="pending_freight_pickup" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Pending Freight Pickup</label>               
+                <field id="pending_freight_pickup_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="pending_freight_pickup_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="pending_freight_pickup_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="pending_freight_pickup_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="pending_delivery" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Pending Delivery</label>               
+                <field id="pending_delivery_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="pending_delivery_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="pending_delivery_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="pending_delivery_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="canceled" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Canceled</label>               
+                <field id="canceled_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="canceled_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="canceled_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="canceled_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="canceledleadtime" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Canceled - Lead Time</label>               
+                <field id="canceledleadtime_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="canceledleadtime_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="canceledleadtime_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="canceledleadtime_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="canceldup" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Canceled - Duplicate</label>               
+                <field id="canceldup_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="canceldup_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="canceldup_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="canceldup_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="canceledprice" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Canceled - Price Issue</label>               
+                <field id="canceledprice_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="canceledprice_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="canceledprice_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="canceledprice_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="cancelefficiency" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Canceled - Efficiency Requirements</label>               
+                <field id="cancelefficiency_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="cancelefficiency_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="cancelefficiency_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="cancelefficiency_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="canceledcustomer" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Canceled - Customer Request</label>               
+                <field id="canceledcustomer_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="canceledcustomer_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="canceledcustomer_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="canceledcustomer_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="paypal_canceled_reversal" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Paypal Canceled Reversal</label>               
+                <field id="paypal_canceled_reversal_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="paypal_canceled_reversal_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="paypal_canceled_reversal_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="paypal_canceled_reversal_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="partial_return" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Partial Return</label>               
+                <field id="partial_return_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="partial_return_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="partial_return_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="partial_return_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="returned" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Returned</label>               
+                <field id="returned_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="returned_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="returned_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="returned_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="holded" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Holded</label>               
+                <field id="holded_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="holded_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="holded_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="holded_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="processing_order" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Processing Order</label>               
+                <field id="processing_order_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="processing_order_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="processing_order_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="processing_order_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="waiting" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Waiting</label>               
+                <field id="waiting_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="waiting_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="waiting_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="waiting_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="underreview" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Under Review</label>               
+                <field id="underreview_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="underreview_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="underreview_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="underreview_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+			<group id="readytoprocess" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Ready To Process</label>               
+                <field id="readytoprocess_bg_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="readytoprocess_txt_c" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="readytoprocess_bg_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+				<field id="readytoprocess_txt_c_hover" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color Hover</label>
+					<frontend_model>SR\ModifiedSalesOrderGrid\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
