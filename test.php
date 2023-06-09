@@ -20,3 +20,4 @@ git add .
 git status
 git commit -m "test4"
 git push
+git diff
