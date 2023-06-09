@@ -1,66 +1,9 @@
-td.processing {background-color: #ab6c81c7; color: #000000;}
-td.pending {background-color:  #0B18FF; color: #ffffff;}
-td.complete {background-color: #2b502a; color: #fff;}
-td.pickedup {background-color: #559A54; color: #fff;}
-td.delivered {background-color: #559A54; color: #fff;}
-td.pending_freight_pickup {background-color: #00C7AB;}
-td.pending_delivery {background-color: #00B076;}
-td.canceled {background-color: #7a1a1c; color:#fff;}
-td.partial_return {background-color: #D9BE5F;}
-td.returned {background-color: #D9BE5F;}
-td.holded {background-color: #dfd991;}
-td.processing_order {background-color: #8fcb87;}
-/* td.waiting {background-color: darkkhaki;} */
-td.underreview {background-color: gold;}
-td.readytoprocess {background-color: #ff7cd2;}
-td.on-mouse {opacity: .9}
-
-
-
-
-.data-grid tr:hover td.processing {background-color: #b58daced; color: #fff; opacity: .9}
-.data-grid tr:hover td.pending {background-color:  #0B18FF; color: #ffffff; opacity: .9}
-.data-grid tr:hover td.complete {background-color: #559A54; color: #fff; opacity: .9}
-.data-grid tr:hover td.pickedup {background-color: #559A54; color: #fff; opacity: .9}
-.data-grid tr:hover td.delivered {background-color: #559A54; color: #fff; opacity: .9}
-.data-grid tr:hover td.pending_freight_pickup {background-color: #00C7AB; opacity: .9}
-.data-grid tr:hover td.pending_delivery {background-color: #00B076; opacity: .9}
-.data-grid tr:hover td.canceled {background-color: #7a1a1ceb; opacity: .9}
-.data-grid tr:hover td.partial_return {background-color: #D9BE5F; opacity: .9}
-.data-grid tr:hover td.returned {background-color: #D9BE5F; opacity: .9}
-.data-grid tr:hover td.holded {background-color: #dfcb91; opacity: .9}
-.data-grid tr:hover td.processing_order {background-color: #75B8E8; opacity: .9}
-/* .data-grid tr:hover td.waiting {background-color: darkkhaki; opacity: .9} */
-.data-grid tr:hover td.underreview {background-color: gold; opacity: .9}
-.data-grid tr:hover td.readytoprocess {background-color: #ff7cd2; opacity: .9}
-.data-grid tr:hover td.on-mouse {opacity: .9}
-
-
-.data-grid td
-{
-border-width: 0 1px 1px 0;
-border-color: #dadfe0;
-border-style: solid;
-padding: 2px 4px 2px 4px; 
+tr#row_orderstatusmanagement_color_fields td.label {
+    display: none;
 }
-
-.sales-order-index .pointer
-{
-cursor: pointer;
+tr#row_orderstatusmanagement_color_fields td.value {
+    width: 100%;
 }
-td.processing a{color: #003aff;}
-td.pending a{color: #ed6502;}
-td.complete a{color: #003aff;}
-td.pickedup a{color: #003aff;}
-td.delivered a{color: #003aff;}
-td.pending_freight_pickup a{color: #003aff;}
-td.pending_delivery a{color: #003aff;}
-td.canceled a{color: #003aff;}
-td.partial_return a{color: #003aff;}
-td.returned a{color: #003aff;}
-td.holded a{color: #003aff;}
-td.processing_order a{color: #003aff;}
-/* td.waiting a{color: #003aff;} */
-td.underreview a{color: #003aff;}
-td.readytoprocess a{color: #003aff;}
-
+tr#row_orderstatusmanagement_color_fields>td:last-child {
+    display: none;
+}
